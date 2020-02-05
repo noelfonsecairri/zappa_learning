@@ -36,13 +36,21 @@ def json_example():
 	language = req_data['language']
 	framework = req_data['framework']
 	website = req_data['website']
+	version_info = req_data['version_info']['python']
+	examples = req_data['examples'][0]
+	boolean = req_data['boolean']
+
+
 
 
 	return '''<h1>
 	The language value is {}.
 	The framework value is {}.
 	The website value is {}.
-	</h1>'''.format(language, framework, website)
+	The version info is {}.
+	The example at index 0 is {}.
+	The boolean value is {}.
+	</h1>'''.format(language, framework, website, version_info, examples, boolean)
 
 
 if __name__ == "__main__":
